@@ -1,37 +1,38 @@
 {
   "name": "@acme/components",
   "version": "0.0.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./src/index.ts",
   "sideEffects": [
     "**/*.css"
   ],
   "private": true,
   "files": [
-    "dist/**"
+    "src/**"
   ],
   "exports": {
-    ".": "./dist",
-    "./styles.css": "./dist/index.css"
+    ".": "./src/index.ts",
+    "./styles.css": "./src/styles.css"
   },
   "scripts": {
-    "build": "tsup --dts --external react",
-    "dev": "tsup --watch --dts --external react",
-    "lint": "eslint \"**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint --fix \"**/*.{ts,tsx}\""
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "postcss": "8.4.25",
+    "autoprefixer": "10.4.14",
+    "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@acme/tailwind-config": "*",
+    "@acme/tsconfig": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
-    "autoprefixer": "10.4.14",
-    "postcss": "8.4.25",
     "eslint": "^8.15.0",
-    "react": "^18.1.0",
-    "tsup": "^5.10.1",
-    "typescript": "5.1.6",
-    "@acme/tsconfig": "*",
-    "@acme/tailwind-config": "*",
     "eslint-config-acme": "*"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
   }
 }

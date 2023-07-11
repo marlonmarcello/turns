@@ -1,7 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+const path = require("path");
 module.exports = {
-  content: ["src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    path.resolve(
+      process.cwd(),
+      __dirname,
+      "../acme-components/src/**/*.{ts,tsx}"
+    ),
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   mode: "jit",
-  darkMode: "media",
+  darkMode: "class",
   plugins: [],
 };

@@ -15,7 +15,13 @@
     "preserveWatchOutput": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "paths": {
+      "@acme/components": ["../acme-components/src"],
+      "@acme/components/*": ["../acme-components/src/*"],
+      "@acme/utils": ["../acme-utils/src"],
+      "@acme/utils/*": ["../acme-utils/src/*"]
+    }
   },
   "exclude": ["node_modules"]
 }

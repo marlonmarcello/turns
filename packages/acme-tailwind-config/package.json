@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
-  "devDependencies": {
-    "tailwindcss": "3.3.2"
+  "scripts": {
+    "lint": "eslint --fix \"**/*.js\""
   }
 }

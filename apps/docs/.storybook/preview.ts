@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import { withThemeByDataAttribute } from "@storybook/addon-styling";
+import { withThemeByClassName } from "@storybook/addon-styling";
 import "@acme/components/styles.css";
 
 export const preview: Preview = {
@@ -15,7 +15,7 @@ export const preview: Preview = {
 };
 
 export const decorators = [
-  withThemeByDataAttribute({
+  withThemeByClassName({
     themes: {
       light: "light",
       dark: "dark",

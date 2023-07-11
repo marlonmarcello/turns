@@ -1,0 +1,9 @@
+.turbo
+.next
+dist
+dist-ssr
+.cache
+server/dist
+public/dist
+storybook-static/
+.vscode

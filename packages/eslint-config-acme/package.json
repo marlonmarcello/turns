@@ -5,15 +5,17 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "eslint --fix \"**/*.js\""
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.61.0",
     "eslint-config-next": "latest",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-config-turbo": "latest",
     "eslint-plugin-react": "7.29.4",
-    "eslint-config-turbo": "latest"
-  },
-  "publishConfig": {
-    "access": "public"
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5"
   }
 }
