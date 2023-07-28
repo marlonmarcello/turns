@@ -12,6 +12,10 @@ As well as a few others tools preconfigured:
 - [Changesets](https://github.com/changesets/changesets) for managing versioning and changelogs
 - [GitHub Actions](https://github.com/changesets/action) for fully automated package publishing
 
+## Demo
+Docs (Storybook): [https://turns-docs.vercel.app/?path=/story/button--primary](https://turns-docs.vercel.app/?path=/story/button--primary)
+App: [https://turns-web.vercel.app/](https://turns-web.vercel.app/)
+
 ## Developing
 
 - `yarn build` - Build all packages, including the Storybook site
