@@ -1,6 +1,4 @@
-# Turborepo Design System Starter
-
-This guide explains how to use a React design system starter powered by:
+# Turns
 
 - 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos
 - 🚀 [Next.js](https://nextjs.org/) — Framework for building React apps
