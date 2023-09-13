@@ -1,0 +1,13 @@
+{
+  "id": "mig_ck13crla9vgq828dpfog",
+  "parentID": "mig_ck13cbda9vgq828dpfng",
+  "checksum": "1:d1b5bb256afd218d9208d613e13f34555033ed3055dc017e74a86866d932984b",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "name",
+        "table": "project_type"
+      }
+    }
+  ]
+}

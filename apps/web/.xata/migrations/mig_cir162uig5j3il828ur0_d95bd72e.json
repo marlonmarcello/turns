@@ -1,0 +1,272 @@
+{
+  "id": "mig_cir162uig5j3il828ur0",
+  "parentID": "mig_cir03neig5j3il828np0",
+  "checksum": "1:d95bd72ec75a7e1572cefedd3a5caa7ae35c10ed337de2ada65636fa90c5d5ed",
+  "operations": [
+    {
+      "addTable": {
+        "table": "NextAuth_Users"
+      }
+    },
+    {
+      "addTable": {
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addTable": {
+        "table": "NextAuth_VerificationTokens"
+      }
+    },
+    {
+      "addTable": {
+        "table": "NextAuth_Users_Accounts"
+      }
+    },
+    {
+      "addTable": {
+        "table": "NextAuth_Users_Sessions"
+      }
+    },
+    {
+      "addTable": {
+        "table": "NextAuth_Sessions"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "email",
+          "type": "email",
+          "unique": true
+        },
+        "table": "NextAuth_Users"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "emailVerified",
+          "type": "datetime"
+        },
+        "table": "NextAuth_Users"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string"
+        },
+        "table": "NextAuth_Users"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "user",
+          "type": "link",
+          "link": {
+            "table": "NextAuth_Users"
+          }
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "type",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "provider",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "providerAccountId",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "refresh_token",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "access_token",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "expires_at",
+          "type": "int"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "token_type",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "scope",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "id_token",
+          "type": "text"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "session_state",
+          "type": "string"
+        },
+        "table": "NextAuth_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "identifier",
+          "type": "string"
+        },
+        "table": "NextAuth_VerificationTokens"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "token",
+          "type": "string"
+        },
+        "table": "NextAuth_VerificationTokens"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "expires",
+          "type": "datetime"
+        },
+        "table": "NextAuth_VerificationTokens"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "user",
+          "type": "link",
+          "link": {
+            "table": "NextAuth_Users"
+          }
+        },
+        "table": "NextAuth_Users_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "account",
+          "type": "link",
+          "link": {
+            "table": "NextAuth_Accounts"
+          }
+        },
+        "table": "NextAuth_Users_Accounts"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "user",
+          "type": "link",
+          "link": {
+            "table": "NextAuth_Users"
+          }
+        },
+        "table": "NextAuth_Users_Sessions"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "session",
+          "type": "link",
+          "link": {
+            "table": "NextAuth_Sessions"
+          }
+        },
+        "table": "NextAuth_Users_Sessions"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "sessionToken",
+          "type": "string"
+        },
+        "table": "NextAuth_Sessions"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "expires",
+          "type": "datetime"
+        },
+        "table": "NextAuth_Sessions"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "user",
+          "type": "link",
+          "link": {
+            "table": "NextAuth_Users"
+          }
+        },
+        "table": "NextAuth_Sessions"
+      }
+    }
+  ]
+}

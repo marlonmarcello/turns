@@ -1,0 +1,18 @@
+{
+  "id": "mig_cir03buig5j3il828no0",
+  "parentID": "mig_cir03824rlulh97q0ps0",
+  "checksum": "1:551fa72c8e4e31d80fd0a109f0fbc5fc8f85943c7cfb80d7b8b7f5ab9e2f7b23",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "table": "Employee"
+      }
+    }
+  ]
+}

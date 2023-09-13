@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Marlon-Ugocioni-Marcello-s-workspace-v76dd2.us-west-2.xata.sh/db/turns-test",
+  "codegen": {
+    "output": "src/xata/index.ts"
+  }
+}

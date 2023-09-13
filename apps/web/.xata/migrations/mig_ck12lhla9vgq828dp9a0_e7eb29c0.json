@@ -1,0 +1,12 @@
+{
+  "id": "mig_ck12lhla9vgq828dp9a0",
+  "parentID": "mig_ck12leta9vgq828dp940",
+  "checksum": "1:e7eb29c0488b0e0560f6ed08a42978e84f33da90f9c266d2d1f6cf5b7a92667a",
+  "operations": [
+    {
+      "addTable": {
+        "table": "client_staff"
+      }
+    }
+  ]
+}

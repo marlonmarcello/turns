@@ -4,6 +4,7 @@ const nextConfig = {
   transpilePackages: ["@acme/components", "@acme/utils"],
   experimental: {
     serverActions: true,
+    typedRoutes: true,
   },
 };
 

@@ -1,0 +1,13 @@
+{
+  "id": "mig_cir1siq4rlulh97q10s0",
+  "parentID": "mig_cir1sfa4rlulh97q10r0",
+  "checksum": "1:03881b70c6017c1412939a3ebbc9417d43c25823473f66a8aa8b9d9e74287e19",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "employee_roles",
+        "oldName": "EmployeeRoles"
+      }
+    }
+  ]
+}

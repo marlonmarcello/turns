@@ -1,0 +1,17 @@
+{
+  "id": "mig_ck12nhta9vgq828dpa60",
+  "parentID": "mig_ck12nela9vgq828dpa50",
+  "checksum": "1:76e2fc01d5da58760b8eb33bd83089d0a1e5cd3f2288c639d49281e43db56ba1",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "unique": true
+        },
+        "table": "project_type"
+      }
+    }
+  ]
+}

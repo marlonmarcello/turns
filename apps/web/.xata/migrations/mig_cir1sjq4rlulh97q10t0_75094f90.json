@@ -1,0 +1,13 @@
+{
+  "id": "mig_cir1sjq4rlulh97q10t0",
+  "parentID": "mig_cir1siq4rlulh97q10s0",
+  "checksum": "1:75094f90aa9fee8eec432025abda17d8ca65906dda0bae30ad3b6959ac0bb4af",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "clients",
+        "oldName": "Clients"
+      }
+    }
+  ]
+}

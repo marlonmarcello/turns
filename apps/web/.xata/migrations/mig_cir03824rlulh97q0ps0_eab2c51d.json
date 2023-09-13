@@ -1,0 +1,13 @@
+{
+  "id": "mig_cir03824rlulh97q0ps0",
+  "parentID": "mig_cir036q4rlulh97q0pr0",
+  "checksum": "1:eab2c51d622588ac2e30e70c080d7c7e94c2b53ed3eab2482819d8a566d0de1b",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "name",
+        "table": "Employee"
+      }
+    }
+  ]
+}

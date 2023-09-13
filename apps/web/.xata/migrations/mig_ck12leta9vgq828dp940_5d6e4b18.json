@@ -1,0 +1,13 @@
+{
+  "id": "mig_ck12leta9vgq828dp940",
+  "parentID": "mig_ck12ldla9vgq828dp8v0",
+  "checksum": "1:5d6e4b1842693d7ba1f4835eafd83df4c3ef5b940d36881e9963fd7d19d7e8a6",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "employee_role",
+        "oldName": "employee_roles"
+      }
+    }
+  ]
+}

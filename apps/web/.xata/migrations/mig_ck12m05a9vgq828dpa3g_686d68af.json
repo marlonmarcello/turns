@@ -1,0 +1,17 @@
+{
+  "id": "mig_ck12m05a9vgq828dpa3g",
+  "parentID": "mig_ck12lq5a9vgq828dp9n0",
+  "checksum": "1:686d68afffafec99be8528f547f3941d92672fbb93ed981cdfea9770400f43b7",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "email",
+          "type": "email",
+          "unique": true
+        },
+        "table": "client_staff"
+      }
+    }
+  ]
+}

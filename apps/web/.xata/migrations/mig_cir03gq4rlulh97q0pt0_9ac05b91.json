@@ -1,0 +1,19 @@
+{
+  "id": "mig_cir03gq4rlulh97q0pt0",
+  "parentID": "mig_cir03buig5j3il828no0",
+  "checksum": "1:9ac05b91ee99d8765e3186cbcca92e83872fa66505670b50383b3d9e44093576",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "role",
+          "type": "link",
+          "link": {
+            "table": "EmployeeRoles"
+          }
+        },
+        "table": "Employee"
+      }
+    }
+  ]
+}

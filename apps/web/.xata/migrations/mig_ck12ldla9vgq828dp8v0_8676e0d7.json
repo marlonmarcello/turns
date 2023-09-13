@@ -1,0 +1,13 @@
+{
+  "id": "mig_ck12ldla9vgq828dp8v0",
+  "parentID": "mig_ck12g35a9vgq828dp820",
+  "checksum": "1:8676e0d7ecfe6a745d995805d0940c2d4918f1c7715fd5f1d364fa0304a2abec",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "client",
+        "oldName": "clients"
+      }
+    }
+  ]
+}

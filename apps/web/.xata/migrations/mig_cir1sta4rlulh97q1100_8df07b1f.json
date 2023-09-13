@@ -1,0 +1,13 @@
+{
+  "id": "mig_cir1sta4rlulh97q1100",
+  "parentID": "mig_cir1sqeig5j3il8293hg",
+  "checksum": "1:8df07b1f9d545ac43daf845aec5bba330111bf5d01168d429e4772246f7c803b",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "nextauth_users_accounts",
+        "oldName": "NextAuth_Users_Accounts"
+      }
+    }
+  ]
+}

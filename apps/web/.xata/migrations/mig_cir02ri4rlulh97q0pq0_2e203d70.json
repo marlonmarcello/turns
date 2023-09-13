@@ -1,0 +1,12 @@
+{
+  "id": "mig_cir02ri4rlulh97q0pq0",
+  "parentID": "mig_cir02pmig5j3il828nm0",
+  "checksum": "1:2e203d702740a086af905d339ff18a1813d3b49e8d6012c3d57468574170bbe1",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Employee"
+      }
+    }
+  ]
+}

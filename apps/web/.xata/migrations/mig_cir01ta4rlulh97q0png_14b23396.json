@@ -1,0 +1,11 @@
+{
+  "id": "mig_cir01ta4rlulh97q0png",
+  "checksum": "1:14b2339688c33397adc280d394ba652d96166987a026faecd13b54fae75626a6",
+  "operations": [
+    {
+      "addTable": {
+        "table": "clients"
+      }
+    }
+  ]
+}

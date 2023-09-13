@@ -10,5 +10,6 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "typescript.tsserver.log": "verbose"
+  "typescript.tsserver.log": "verbose",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,103 +1,55 @@
-"use client";
+import { getXataClient } from "@/xata";
+import { Button } from "@acme/components";
+import { ProjectFormFields } from "./ProjectFormFields";
 
-import { useState } from "react";
-import {
-  Button,
-  FormCheckbox,
-  FormInput,
-  FormLabel,
-  FormSelect,
-} from "@acme/components";
+const xata = getXataClient();
 
-interface ProjectFormProps {
-  onSubmit: (data: FormData) => void;
-  projectTypes: ProjectType[];
-  clients: Client[];
-  users: User[];
-  clientEmployees: ClientEmployee[];
+// Or alternatively provide a custom function:
+function isFulfilled<T>(
+  val: PromiseSettledResult<T>
+): val is PromiseFulfilledResult<T> {
+  return val.status === "fulfilled";
 }
 
-export function ProjectForm({
-  onSubmit,
-  projectTypes,
-  clients,
-  users,
-  clientEmployees,
-}: ProjectFormProps) {
-  const [client, setClient] = useState(clients[0]);
+export async function ProjectForm() {
+  const [clients, employees, projectTypes, clientEmployees] =
+    await Promise.allSettled([
+      xata.db.client.select(["id", "name"]).getAll(),
+      xata.db.employee.select(["id", "name", "role.name"]).getAll(),
+      xata.db.project_type.select(["id", "name"]).getAll(),
+      xata.db.client_employee.select(["id", "name", "client.id"]).getAll(),
+    ])
+      .then((results) => results.filter(isFulfilled))
+      .then((all) => all.map(({ value }) => value));
 
-  const handleClientChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const client = clients.find((c) => c.id === e.target.value);
-    if (client) setClient(client);
-  };
+  async function handleOnSubmit(data: FormData) {
+    "use server";
+
+    const projects: Project = [...new Map(data.entries())].reduce(
+      (acc, [key]) => {
+        const value = data.getAll(key);
+        acc[key] = value.length > 1 ? value : value[0];
+        return acc;
+      },
+      {}
+    );
+
+    console.log(projects);
+  }
+
+  console.log([clients, employees, projectTypes, clientEmployees]);
 
   return (
     <form
-      action={onSubmit}
+      action={handleOnSubmit}
       className="block w-full rounded-md border border-gray-800 p-4 dark:border-gray-600"
     >
-      <FormLabel label="Type of project:">
-        <FormSelect
-          name="projectType"
-          options={projectTypes.map((p) => ({
-            label: p.name,
-            value: p.id,
-          }))}
-        />
-      </FormLabel>
-
-      <FormLabel label="Client:">
-        <FormSelect
-          name="client"
-          options={clients.map((c) => ({ value: c.id, label: c.name }))}
-          onChange={handleClientChange}
-        />
-      </FormLabel>
-
-      <FormLabel label="Docket number:">
-        <FormInput name="dockerNumber" type="text" placeholder="pokexxx" />
-      </FormLabel>
-
-      <FormLabel label="Project name:">
-        <FormInput
-          name="projectName"
-          type="text"
-          placeholder="Mario Campaign"
-        />
-      </FormLabel>
-
-      <FormLabel htmlFor="team" label="Team:" />
-      <fieldset className="grid grid-cols-2 px-1">
-        {users.map((u) => (
-          <FormCheckbox
-            name="team"
-            key={u.id}
-            value={u.id}
-            caption={u.role.name}
-          >
-            {u.name}
-          </FormCheckbox>
-        ))}
-      </fieldset>
-
-      <FormLabel label="Client team:" />
-      <fieldset className="grid grid-cols-2 px-1">
-        {clientEmployees
-          .filter((e) => e.client.id === client.id)
-          .map((e) => (
-            <FormCheckbox name="clientTeam" key={e.id} value={e.id}>
-              {e.name}
-            </FormCheckbox>
-          ))}
-      </fieldset>
-
-      <FormLabel label="Start date:">
-        <FormInput name="startDate" type="date" defaultValue={"2023-06-20"} />
-      </FormLabel>
-
-      <FormLabel label="End date:">
-        <FormInput name="endDate" type="date" defaultValue={"2023-07-20"} />
-      </FormLabel>
+      <ProjectFormFields
+        clients={clients}
+        employees={employees}
+        projectTypes={projectTypes}
+        clientEmployees={clientEmployees}
+      />
 
       <div className="text-right">
         <Button type="submit" variant="success">

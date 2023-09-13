@@ -1,0 +1,17 @@
+{
+  "id": "mig_cir0266ig5j3il828nkg",
+  "parentID": "mig_cir01ta4rlulh97q0png",
+  "checksum": "1:8882634f6fd7a6a69e29aa6b47854b45429239d9b77262ddb7033dc0a801b9b5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "unique": true
+        },
+        "table": "clients"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mig_ck13ct5a9vgq828dpfpg",
+  "parentID": "mig_ck13crla9vgq828dpfog",
+  "checksum": "1:2e4dd14a219029fb0516892e5d4f1bf480cabb17b410f86a5035831a3df02c17",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "name",
+        "oldName": "name2",
+        "table": "project_type"
+      }
+    }
+  ]
+}
